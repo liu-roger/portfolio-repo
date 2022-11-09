@@ -9,7 +9,7 @@ function App() {
       <Route path="/" element={<Layout/>}/>
     </Routes>
     </>
-  );
+  )
 }
 
 export default App;
