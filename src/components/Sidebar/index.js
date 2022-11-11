@@ -4,6 +4,7 @@ import LogoS from '../../assets/images/RL-portfolio.png'
 import LogoSubtitle from '../../assets/images/name-portfolio.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Sidebar = () => (
     <div className='nav-bar'>
@@ -25,6 +26,26 @@ const Sidebar = () => (
                 <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e"/>
             </NavLink>
         </nav>
+
+        <ul>
+            <li>
+                <a traget="_blank" rel="noreferrer" href="https://www.linkedin.com/in/roger-liu-rgl72">
+                    <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
+                </a>
+            </li>
+
+            <li>
+                <a traget="_blank" rel="noreferrer" href="https://github.com/liu-roger">
+                    <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
+                </a>
+            </li>
+
+            <li>
+                <a traget="_blank" rel="noreferrer" href="https://twitter.com/_rogerliu">
+                    <FontAwesomeIcon icon={faTwitter} color="#4d4d4e" />
+                </a>
+            </li>
+        </ul>
     </div>
     
 )
