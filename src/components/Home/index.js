@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AnimatedLetters from '../AnimatedLetters';
 //import LogoTitle from '../../assets/images/name-portfolio.png';
@@ -13,6 +13,18 @@ const Home = () => {
     const nameArray = name.split('');
     let jobName = 'jr. web developer.';
     const jobArray = jobName.split('');
+
+    useEffect(() => {
+        
+        let timeoutId = setTimeout(() => {
+            setLetterClass('text-animate-hover')
+        }, 4000)
+        
+        return () => {
+                    clearTimeout(timeoutId)
+                }
+    }, [])
+    
 
     return (
         <div className="container home-page">
