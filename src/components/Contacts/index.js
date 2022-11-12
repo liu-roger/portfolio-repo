@@ -31,6 +31,10 @@ const Contact = () => {
                         idx={15}
                         />
                     </h1>
+
+                    <p>
+                        whefuiowehfohwoifuio2whfo2hiuwgiwugfiuhweoufwhioefowehi
+                    </p>
                 </div>
             </div>
             <Loader type="pacman"/>
