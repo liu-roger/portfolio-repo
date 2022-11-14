@@ -97,6 +97,12 @@
                 color:#ffd700;
             }
         }
+
+        a.portfolio-link {
+            &:after {
+                content: 'WORK';
+            }
+        }
     }
 
     ul{
