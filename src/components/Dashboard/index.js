@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react"
-import { getAuth, onAuthStateChanged } from 'firebase/auth'
+import { useEffect, useState } from "react";
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import Home from "./home";
-import Login from "../Login"
+import Login from '../Login';
 
 const Dashboard = () => {
 
@@ -19,11 +19,11 @@ const Dashboard = () => {
     }, []);
 
 
-
     return (
-        <div>
-             {user ? <Home /> : <Login />}
-        </div>
+       <div>
+           {user ? <Home /> : <Login />}
+       </div>
     )
 }
-export default Dashboard
+
+export default Dashboard;
