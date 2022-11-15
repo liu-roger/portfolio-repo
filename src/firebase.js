@@ -1,8 +1,7 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { getStorage } from 'firebase/storage'
-import { getFirestore } from 'firebase/firestore/lite'
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getStorage } from 'firebase/storage';
+import { getFirestore } from 'firebase/firestore/lite';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -15,7 +14,6 @@ const firebaseConfig = {
   storageBucket: "react-portfolio-display-dash.appspot.com",
   messagingSenderId: "32460760545",
   appId: "1:32460760545:web:28ca809d0713ec40e25ea0",
-  measurementId: "G-44QX5DYS7W"
 };
 
 // Initialize Firebase
@@ -25,4 +23,5 @@ const provider = new GoogleAuthProvider();
 export const db = getFirestore(app);
 export const storage = getStorage(app);
 
-export const signInWithGoogle = () => signInWithPopup(auth, provider)
+
+export const signInWithGoogle = () => signInWithPopup(auth, provider);

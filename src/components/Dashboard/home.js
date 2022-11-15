@@ -1,14 +1,14 @@
-import { useRef } from "react"
-import { auth, db, storage } from "../../firebase"
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
-import { addDoc } from 'firebase/firestore'
-import { collection } from 'firebase/firestore/lite'
+import { useRef } from 'react';
+import { auth, storage, db } from '../../firebase';
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { addDoc } from 'firebase/firestore';
+import { collection } from 'firebase/firestore';
 
 
 const Home = () => {
     const form = useRef();
 
-    const submitPortfolio = (e) =>{
+    const submitPortfolio = (e) => {
         e.preventDefault();
         const name = form.current[0]?.value;
         const description = form.current[1]?.value;
@@ -25,62 +25,52 @@ const Home = () => {
                         description,
                         url,
                         image: downloadUrl
-
                     })
-                }, () => {
+                }, (error) => {
+                    console.log(error);
                     savePortfolio({
                         name,
                         description,
                         url,
                         image: null
-    
                     })
                 })
-            }, () => {
+            }, (error) => {
+                console.log(error);
                 savePortfolio({
                     name,
                     description,
                     url,
                     image: null
-
                 })
             }
         )
     }
 
     const savePortfolio = async (portfolio) => {
-        console.log(portfolio)
         try {
+            console.log(db)
             await addDoc(collection(db, 'portfolio'), portfolio);
             window.location.reload(false);
         } catch (error) {
-            alert('Failed to add portfolio')
+            console.log(error)
+            alert('Failed to add portfolio');
         }
     }
 
     return (
         <div className="dashboard">
+
             <form ref={form} onSubmit={submitPortfolio}>
-                <p>
-                    <input type='text' placeholder='Name'/>
-                </p>
-
-                <p>
-                    <textarea placeholder='Description'/>
-                </p>
-
-                <p>
-                    <input type='text' placeholder='URL'/>
-                </p>
-
-                <p>
-                    <input type='file' placeholder='Image'/>
-                </p>
-
-                <button type="submit"> Submit</button>
-                <button onClick={()=>auth.signOut()}> Sign Out</button>
+                <p><input type="text" placeholder="Name" /></p>
+                <p><textarea placeholder="Description" /></p>
+                <p><input type="text" placeholder="Url" /></p>
+                <p><input type="file" placeholder="Image" /></p>
+                <button type="submit">Submit</button>
+                <button onClick={() => auth.signOut()}>Sign out</button>
             </form>
         </div>
     )
 }
-export default Home
+
+export default Home;
