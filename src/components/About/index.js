@@ -34,15 +34,10 @@ const About = () => {
                         />
                     </h1>
                     <p>
-                        ieruoagihgaouigauiohgaougraluihgiuahgkluiagliua
+                    I am proficient in Java, Python, SQL, Javascript, and the react Framwork. I have worked with C# in the past as well. 
                     </p>
-
                     <p>
-                        ieruoagihgaouigauiohgaougraluihgiuahgkluiagliua
-                    </p>
-
-                    <p>
-                        ieruoagihgaouigauiohgaougraluihgiuahgkluiagliua
+                    I have worked at Corning Incorporated in designing GUIs for research equipment as well as implementing websites for internal orders.
                     </p>
                 </div>
 
