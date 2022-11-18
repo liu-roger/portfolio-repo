@@ -12,7 +12,7 @@ const Home = () => {
     const [letterClass, setLetterClass]= useState('text-animate')
     let name = ' Roger Liu';
     const nameArray = name.split('');
-    let jobName = 'jr. web developer.';
+    let jobName = ' jr. web developer.';
     const jobArray = jobName.split('');
 
     useEffect(() => {
@@ -41,7 +41,7 @@ const Home = () => {
                     <span className={`${letterClass} _16`}>m  </span>  
                     <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={17}/>
                     <br />
-                    <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={22}/>
+                    <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={21}/>
                 </h1>
 
                 <h2> Junior Fullstack Web Developer </h2>

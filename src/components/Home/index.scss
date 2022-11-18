@@ -12,7 +12,7 @@
 
     h1 {
         color: #fff;
-        font-size: 53px;
+        font-size: 51px;
         margin: 0;
         font-family: 'Coolvetica';
         font-weight: 400;
@@ -81,7 +81,30 @@
             color: #333;
         }
     }
+}
 
-    
+@media screen and (max-width: 1200px){ 
+    .tags,
+    .home-page h1::before,
+    .home-page h1::after {
+        display: none;
+    }
 
+    .home-page {
+        .text-zone {
+            position: initial;
+            width: 100%;
+            transform: none;
+            padding: 6px;
+            box-sizing: border-box;
+        }
+    }
+    .flat-button {
+        float: none;
+        display: block;
+        margin: 20px auto 0 auto;
+    }
+    .logo-container {
+
+    }
 }
