@@ -3,7 +3,7 @@ import './index.scss';
 import LogoS from '../../assets/images/RL-portfolio.png'
 import LogoSubtitle from '../../assets/images/name-portfolio.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faHome, faSuitcase, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faEnvelope, faHome, faSuitcase, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Sidebar = () => (
@@ -35,23 +35,24 @@ const Sidebar = () => (
 
         <ul>
             <li>
-                <a traget="_blank" rel="noreferrer" href="https://www.linkedin.com/in/roger-liu-rgl72">
+                <a  rel="noreferrer" href="https://www.linkedin.com/in/roger-liu-rgl72">
                     <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
                 </a>
             </li>
 
             <li>
-                <a traget="_blank" rel="noreferrer" href="https://github.com/liu-roger">
+                <a target="_blank" rel="noreferrer" href="https://github.com/liu-roger">
                     <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
                 </a>
             </li>
 
             <li>
-                <a traget="_blank" rel="noreferrer" href="https://twitter.com/_rogerliu">
+                <a target="_blank" rel="noreferrer" href="https://twitter.com/_rogerliu">
                     <FontAwesomeIcon icon={faTwitter} color="#4d4d4e" />
                 </a>
             </li>
         </ul>
+        <FontAwesomeIcon icon={faBars} color='#ffd700' size='3x' className='hamburger-icon' />
     </div>
     
 )
