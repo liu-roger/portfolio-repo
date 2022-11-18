@@ -10,8 +10,8 @@
         margin-left: 100px;
         margin-top: 100px;
     }
-    
-    .images-container  {
+
+    .images-container {
         display: flex;
         gap: 15px;
         flex-wrap: wrap;
@@ -109,6 +109,25 @@
             bottom: 0;
             background: transparent;
         }
-
     }
 }
+
+@media screen and (max-width: 1200px){
+    .container.portfolio-page{
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+
+        h1.page-title {
+            margin-left: 20px;
+            margin-top: 20px;
+
+        }
+
+        .image-box {
+            height: 200px;
+            min-width: calc(50% - 10px);
+        }
+    }
+}
+

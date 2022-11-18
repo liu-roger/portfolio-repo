@@ -30,7 +30,7 @@ const Portfolio = () => {
         setPortfolio(querySnapshot.docs.map((doc) => doc.data()));
     }
 
-    console.log(portfolio)
+    
     const renderPortfolio = (portfolio) => {
         return (
             <div className="images-container">

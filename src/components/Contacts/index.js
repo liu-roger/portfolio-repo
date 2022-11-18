@@ -51,7 +51,7 @@ const Contact = () => {
                     </h1>
 
                     <p>
-                        I you would like to contact me, please fill out the form provided below. If successful you will recieve a confirmation email stating that your message has been sent!
+                        I you would like to contact me, please fill out the form provided below. If successful, you will recieve a confirmation email stating that your message has been sent! I will respond as soon as possible!
                     </p>
 
                     <div className='contact-form'>
