@@ -27,7 +27,7 @@ const Portfolio = () => {
 
     const getPortfolio = async () => {
         const querySnapshot = await getDocs(collection(db, 'portfolio'));
-        setPortfolio(querySnapshot.docs.map((doc) => doc.data()));
+        setPortfolio(querySnapshot.docs.map((doc) => doc.data()).sort((a, b) => (a.timestamp > b.timestamp ? -1 : 1)));
     }
 
     
