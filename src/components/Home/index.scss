@@ -83,15 +83,16 @@
     }
 }
 
-@media screen and (max-width: 1200px){ 
+@media screen and (max-width: 1200px) {
     .tags,
-    .home-page h1::before,
-    .home-page h1::after {
-        display: none;
+    .home-page h1:before,
+    .home-page h1:after {
+      display: none;
     }
 
     .home-page {
         .text-zone {
+            text-align: center;
             position: initial;
             width: 100%;
             transform: none;
@@ -99,10 +100,11 @@
             box-sizing: border-box;
         }
     }
-    .flat-button {
+    .home-page .flat-button {
         float: none;
         display: block;
         margin: 20px auto 0 auto;
+        width: 124px;
     }
     .logo-container {
 
