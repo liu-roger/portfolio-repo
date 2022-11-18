@@ -5,15 +5,19 @@ import LogoSubtitle from '../../assets/images/name-portfolio.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faEnvelope, faHome, faSuitcase, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { useState } from 'react';
 
-const Sidebar = () => (
+const Sidebar = () => {
+    const [showNav, setShowNav] = useState(false);
+    return(
+        
     <div className='nav-bar'>
         <Link className='logo' to='/'>
             <img src={LogoS} alt="logo"/>
             <img className="sub-logo" src={LogoSubtitle} alt="rogerliu"/>
 
         </Link>
-        <nav>
+        <nav classname={showNav ? 'mobile-show' : ''}>
             <NavLink exact="true" activeclassname="active" to="/">
                 <FontAwesomeIcon icon={faHome} color="#4d4d4e"/>
             </NavLink>
@@ -52,9 +56,10 @@ const Sidebar = () => (
                 </a>
             </li>
         </ul>
-        <FontAwesomeIcon icon={faBars} color='#ffd700' size='3x' className='hamburger-icon' />
+        <FontAwesomeIcon onClick={()=>setShowNav(true)} icon={faBars} color='#ffd700' size='3x' className='hamburger-icon' />
     </div>
+    )
     
-)
+}
 
 export default Sidebar

@@ -127,11 +127,12 @@
                 &:hover svg {
                     color: #ffd700;
                 }
-
             }
         }
-
     }
+}
+.hamburger-icon {
+    display: none;
 }
 
 @media screen and (max-width: 1200px){
@@ -173,7 +174,18 @@
                 opacity: 1 !important;
             }
 
+            &.mobile-show {
+                display: block;
+            }
+
             
+        }
+
+        .hamburger-icon {
+            display: block;
+            position: absolute;
+            top: 15px;
+            right: 15px;
         }
 
         
