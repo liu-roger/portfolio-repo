@@ -11,7 +11,7 @@
 
 
     h1 {
-        color: #fff;
+        color: black;
         font-size: 51px;
         margin: 0;
         font-family: 'Coolvetica';
@@ -20,7 +20,7 @@
         &::before {
             content: '<h1>';
             font-family: 'La Belle Aurore';
-            color: #ffd700;
+            color: #bd9e8f;
             font-size: 18px;
             position: absolute;
             margin-top: -40px;
@@ -31,7 +31,7 @@
         &::after {
             content: '<h1/>';
             font-family: 'La Belle Aurore';
-            color: #ffd700;
+            color: #bd9e8f;
             font-size: 18px;
             position: absolute;
             margin-top: 18px;
@@ -52,7 +52,7 @@
     }
 
     h2 {
-        color: #8d8d8d;
+        color: black;
         margin-top: 20px;
         font-weight: 400;
         font-size: 11px;
@@ -62,14 +62,14 @@
     }
 
     .flat-button {
-        color: #ffd700;
+        color: #9241FD;
         font-size: 13px;
         font-weight: 400;
         letter-spacing: 4px;
         font-family: sans-serif;
         text-decoration: none;
         padding: 10px 18px;
-        border: 1px solid #ffd700;
+        border: 1px solid #bd9e8f;
         margin-top: 25px;
         float: left;
         animation: fadeIn 1s 1.8s backwards;
@@ -77,8 +77,8 @@
     
 
         &:hover {
-            background: #fdd700;
-            color: #333;
+            background: #9241FD;
+            color: white;
         }
     }
 }
